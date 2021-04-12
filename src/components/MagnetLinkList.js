@@ -3,7 +3,7 @@ import LinkItem from "./LinkItem";
 import {AppContext} from "./App";
 import {Pagination} from "@material-ui/lab";
 
-const itemsPerPage=10
+const itemsPerPage=5
 function MagnetLinkList(props) {
     const appContext =useContext(AppContext)
     const deployedContract=appContext.deployedContract
