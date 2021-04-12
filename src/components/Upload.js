@@ -45,8 +45,8 @@ const Upload = (props) => {
 
         const gasAmount = await uploadHandler.estimateGas({from: currentAccount})
         const gasPrice=await web3.eth.getGasPrice()
-        console.log(gasPrice*1.01)
-        uploadHandler.send({from: currentAccount, gas: gasAmount,gasPrice:gasPrice*1.01})
+
+        uploadHandler.send({from: currentAccount, gas: gasAmount,gasPrice:gasPrice})
             .once('receipt', async (receipt)=> {
 
                 if(inputSeedName.current){

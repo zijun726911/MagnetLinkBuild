@@ -32,11 +32,9 @@ function AddressBar (props) {
 
   let checkUserSeeds = useCallback(async()=>{
       if (deployedContract&&seedInfos.length>0){
-          console.log("your personal SeedsID")
           let seedArray = []
           let counter = await deployedContract.methods.uploadAndDownloadCounter(currentAccount).call()
 
-          console.log(counter)
 
           for (let i=0; i<counter; i++) {
               let id = await deployedContract.methods.OwnerSeedsSummary(currentAccount,i).call()
@@ -48,7 +46,6 @@ function AddressBar (props) {
           seedArray.sort((seed1,seed2)=>{
               return seed1.id-seed2.id
           })
-          console.log(seedArray)
 
           setPersonalSeeds(seedArray)
       }

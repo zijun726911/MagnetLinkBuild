@@ -142,7 +142,6 @@ async function getContractBalance(){
 }
 
 const getSeedInfosFromContract= async (forceToUpdate)=>{
-    console.log("in getSeedInfosFromContract")
     const seedAmount=await deployedContract.methods.seedAmount().call()
 
     if(forceToUpdate||seedAmount>seedInfos.length){
