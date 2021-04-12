@@ -20,7 +20,7 @@ const PersonalSeeds = (props) => {
                         <TableContainer component={Paper}>
                             <Table  aria-label="simple table">
                                 <TableHead>
-                                    <TableRow>
+                                    <TableRow >
                                         <TableCell align="right">Seed Id</TableCell>
                                         <TableCell align="right">Name</TableCell>
                                         <TableCell align="right">Link</TableCell>

@@ -12,7 +12,6 @@ const LinkItem = (props) => {
     const [color, setColor] = useState(azure);
 
     useEffect(()=>{
-        console.log("useEffect")
         if(props.selected) {
             setColor(lightgreen)
         }else {
